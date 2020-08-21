@@ -1,0 +1,38 @@
+/* ion-content.background{
+    --ion-background-color:#001a4d;
+}*/
+#container{
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+    top:60%;
+    transform: translateY(-50%);
+}
+
+.bg-imagen{
+ --background:url(../../../assets/img/stars.jpg);
+ 
+
+}
+
+.btn-2{
+    margin-top: 50px;
+}
+.btn-1,.btn-2{
+    --box-shadow:none;
+    --background: radial-gradient(circle, rgba(55,48,46,0.42620798319327735) 0%, rgba(40,9,15,1) 100%);
+}
+.nasa-front{
+   
+    margin-top: 70px;
+    display:block;
+    margin: auto;
+}
+  
+/*
+.btn-2{
+    --margin-top:90px;
+}*/
+
+

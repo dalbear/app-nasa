@@ -1,0 +1,21 @@
+<app-header titulo="Imagenes dias anteriores"></app-header>
+<ion-button (click)="getTask()">dsd</ion-button>
+<ion-content>
+
+
+    <ion-card  mode="ios" class="bg-card">
+        <ion-card-header>
+            <ion-item class="title">
+            <ion-title>{{title}}</ion-title>  
+            <ion-icon color="Secondary" slot="end" name="planet-outline"></ion-icon>
+            <ion-card-subtitle></ion-card-subtitle>      
+             </ion-item>  
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-img src="{{url}}" class="imagen"></ion-img>
+            {{explanations}}
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

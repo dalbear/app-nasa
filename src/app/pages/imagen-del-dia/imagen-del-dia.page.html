@@ -1,0 +1,22 @@
+<app-header titulo="Imagen del dia" ></app-header>
+
+<ion-content>
+
+
+
+    <ion-card  mode="ios" class="bg-card">
+        <ion-card-header>
+            <ion-item class="title">
+            <ion-title>{{title}}</ion-title>  
+            <ion-icon color="Secondary" slot="end" name="planet-outline"></ion-icon>
+            <ion-card-subtitle>{{date}}</ion-card-subtitle>      
+             </ion-item>  
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-img src="{{url}}" class="imagen"></ion-img>
+            {{explanation}}
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
