@@ -1,21 +1,33 @@
-<app-header titulo="Imagenes dias anteriores"></app-header>
-<ion-button (click)="getTask()">dsd</ion-button>
-<ion-content>
+<app-header titulo="Dias anteriores"></app-header>
 
-
-    <ion-card  mode="ios" class="bg-card">
-        <ion-card-header>
+<ion-content class="bg-content">
+ <ion-list >
+    <ion-item >
+        <ion-label>Selecciona una fecha</ion-label>
+            <ion-datetime 
+            placeholder="yyyy-mm-dd"       
+            display-format="YYYY MMMM DD"
+            [ngModel]="fecha.toISOString()"
+            [min]="minDate" [max]="maxDate"
+            [pickerOptions]="customPickerOptions">
+            </ion-datetime>
+     </ion-item> 
+ </ion-list>
+ 
+ <div id="ocultar" class="ocultarDiv" >
+       <ion-card  mode="ios" class="bg-card">
+        <ion-card-header >
             <ion-item class="title">
-            <ion-title>{{title}}</ion-title>  
-            <ion-icon color="Secondary" slot="end" name="planet-outline"></ion-icon>
-            <ion-card-subtitle></ion-card-subtitle>      
-             </ion-item>  
+            <ion-title color="light" size="small">{{title}}</ion-title>  
+            <ion-icon color="light" slot="end" name="planet-outline"></ion-icon>
+            <ion-card-subtitle color="light">{{date}}</ion-card-subtitle>      
+             </ion-item>          
         </ion-card-header>
-
-        <ion-card-content>
+        <ion-card-content >
             <ion-img src="{{url}}" class="imagen"></ion-img>
-            {{explanations}}
+           <ion-text color="light">{{explanation}}</ion-text>
         </ion-card-content>
     </ion-card>
+</div>
 
 </ion-content>

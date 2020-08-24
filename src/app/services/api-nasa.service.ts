@@ -10,6 +10,7 @@ export class ApiNasaService {
   
     private apiUrlCompleted = `https://api.nasa.gov/planetary/apod?api_key=fudURmL6zNhqegZOI9kRsHZWdVyHjJnGScPDDNbU`;
     private apiUrl = `https://api.nasa.gov/planetary`;
+    private key = `fudURmL6zNhqegZOI9kRsHZWdVyHjJnGScPDDNbU`
 
   constructor( private http:HttpClient) { }
 
@@ -18,8 +19,9 @@ export class ApiNasaService {
     return this.http.get(`${this.apiUrlCompleted} `);
   }
 
-  mostrarImagenes(date,key){
-    return this.http.get(`${this.apiUrl}/apod?date=${date}&api_key=${key}`)
+    //Funcion de los dias pasados
+  mostrarImagenes(date){
+    return this.http.get(`${this.apiUrl}/apod?date=${date}&api_key=${this.key}`)
   }
 
 

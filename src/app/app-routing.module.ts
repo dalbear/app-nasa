@@ -18,11 +18,8 @@ const routes: Routes = [
   {
     path: 'imagenes-dias-anteriores',
     loadChildren: () => import('./pages/imagenes-dias-anteriores/imagenes-dias-anteriores.module').then( m => m.ImagenesDiasAnterioresPageModule)
-  },
-  {
-    path: 'buscador-imagen',
-    loadChildren: () => import('./pages/buscador-imagen/buscador-imagen.module').then( m => m.BuscadorImagenPageModule)
   }
+  
 
  
 ];

@@ -2,46 +2,27 @@
 
 <ion-content fullscreen="true" class="bg-imagen">
 
-    <img src="../../../assets/img/nasa api.png" class="nasa-front">
-    <div id="container">
-      <ion-list>
-        <ion-item>
-         <ion-label>Fecha seleccionada</ion-label>
-         <ion-datetime placeholder="Fecha"
-                         
-                          display-format="YYYY MMMM DD"
-                          cancelText="Cancelar"
-                          doneText="Hecho"
-                          [ngModel]="fecha.toISOString()"
-                          (ionChange)="cambioFecha($event)"
-                                            >
-         </ion-datetime>
-        </ion-item> 
-       </ion-list>
+  <img src="../../../assets/img/nasa api.png" class="nasa-front">
+  
+  <div id="container">
+      <ion-button  
+        size="large" 
+        expand="block" 
+        fill="solid" 
+        shape="round" 
+        class="btn-1" 
+        routerLink="/imagen-del-dia">
+        Conoce la imagen del dia
+       </ion-button>
 
-
-      <ion-button  size="large" expand="block" fill="solid" shape="round" class="btn-1" routerLink="/imagen-del-dia">
-      Conoce la imagen del dia
-    </ion-button>
-
-    <ion-button  size="large" expand="block" fill="solid" shape="round" class="btn-2" routerLink="/imagenes-dias-anteriores" >
-      Explora dias pasados
-    </ion-button>
-
-
-
+      <ion-button  
+        size="large" 
+        expand="block" 
+        fill="solid" 
+        shape="round" 
+        class="btn-2" 
+        routerLink="/imagenes-dias-anteriores">
+        Explora dias anteriores
+      </ion-button>
 </div>
-<!-- 
-  <ion-button routerLink="/imagen-del-dia">
-      Conoce la imagen del dia 
-  </ion-button>
-
-  <ion-button routerLink="/imagenes-dias-anteriores">
-    ...O mira la de los ultimos 8 dias!
-</ion-button>
--->
-
-
-
-
 </ion-content>

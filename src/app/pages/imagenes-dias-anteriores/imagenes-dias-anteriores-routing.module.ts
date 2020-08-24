@@ -15,4 +15,7 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes),ComponentsModule],
   exports: [RouterModule],
 })
-export class ImagenesDiasAnterioresPageRoutingModule {}
+export class ImagenesDiasAnterioresPageRoutingModule {
+  
+  
+}

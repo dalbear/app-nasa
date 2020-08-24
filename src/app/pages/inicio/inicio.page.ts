@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Renderer2} from '@angular/core';
+
 
 @Component({
   selector: 'app-inicio',
@@ -7,16 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  fecha: Date = new Date();
+    
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }
-
-  cambioFecha (event){
-    console.log('ionChange',event);
-    console.log('Date', new Date(event.detail.value));
-  }
-
 }
