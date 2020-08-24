@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module'; // TRAEMOS EL COMPONENTE QUE CREAMOS
 //El app IonicModule importa todos los componentes de Ionic
 import{HttpClientModule} from '@angular/common/http'; //PARA CONECTARNOS CON UN CLIENTE EXTERNO
-import{ApiNasaService} from '../../src/app/services/api-nasa.service'; //TRAEMOS EL SERVICIOion
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -20,7 +20,7 @@ import{ApiNasaService} from '../../src/app/services/api-nasa.service'; //TRAEMOS
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    ApiNasaService //TRAEMOS EL SERVICIO
+   
   ],
   bootstrap: [AppComponent]
 })

@@ -8,8 +8,10 @@
             placeholder="yyyy-mm-dd"       
             display-format="YYYY MMMM DD"
             [ngModel]="fecha.toISOString()"
-            [min]="minDate" [max]="maxDate"
+            min="1996-06-20" [max]="maxDate" 
             [pickerOptions]="customPickerOptions">
+            <!--8 DIAS : [min]="minDate" -->
+
             </ion-datetime>
      </ion-item> 
  </ion-list>

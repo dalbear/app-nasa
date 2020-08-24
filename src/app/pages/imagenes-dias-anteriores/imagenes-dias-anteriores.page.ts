@@ -39,12 +39,14 @@ export class ImagenesDiasAnterioresPage implements OnInit {
       buttons: [{
         text: 'Elegir',
         handler: (evento) => {
-        //console.log(evento.year.value,evento.month.value,evento.day.value);
+       
+          //console.log(evento.year.value,evento.month.value,evento.day.value);
         //OBTENEMOS LAS VARIABLES DEL CALENDARIO   
         let ano = evento.year.value;
         let mes = evento.month.value;
         let dia = evento.day.value;
         let fechaCompleta = ano+"-"+mes+"-"+dia;
+       
         // DESDE AQUI LLEVO LOS PARAMETROS AL SERVICIO DE LA API DE LA NASA 
         this.servicioNasa.mostrarImagenes(fechaCompleta).subscribe((res:any) => {
           this.date = res.date;
