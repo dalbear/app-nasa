@@ -13,10 +13,26 @@
             </ion-item>  
         </ion-card-header>
 
+        
+
         <ion-card-content >
-            <ion-img alt="IMAGEN PUEDE NO ESTAR DISPONIBLE EN ALGUNOS HORARIOS NOCTURNOS" src="{{url}}" class="imagen"></ion-img>
-            <ion-text color="light">{{explanation}}</ion-text>
+            <div class="video-container">
+                <img src="{{url}}" *ngIf="mimeType=='image'" class="imagen" alt="IMAGEN PUEDE NO ESTAR DISPONIBLE EN HORARIOS NOCTURNOS">
+                <iframe [src]="url | safe"  *ngIf="mimeType=='video'" frameborder="0" allowfullscreen></iframe>
+            </div>
+        <br>
+            <div class="ion-text-justify">
+                <ion-text color="light">{{explanation}}</ion-text>
+            </div>
+            
         </ion-card-content>
+
+
+
+
     </ion-card>
 
+
+    
 </ion-content>
+

@@ -4,20 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InicioPageRoutingModule } from './inicio-routing.module';
-
-import { InicioPage } from './inicio.page';
+import { SemanaPageRoutingModule } from './semana-routing.module';
+import { SafePipe } from "../../pipe/safe.pipe";
+import { SemanaPage } from './semana.page';
 import { ComponentsModule } from 'src/app/components/components.module';
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule,
-    ComponentsModule
+    SemanaPageRoutingModule,
+    ComponentsModule //TREMOS EL COMPONNENTMODULE
   ],
-  declarations: [InicioPage]
+  declarations: [SafePipe,SemanaPage]
 })
-export class InicioPageModule {}
+export class SemanaPageModule {}

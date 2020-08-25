@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ImagenesDiasAnterioresPage } from './imagenes-dias-anteriores.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
+
 const routes: Routes = [
   {
     path: '',

@@ -30,8 +30,11 @@ export class ImagenesDiasAnterioresPage implements OnInit {
     explanation:string;
     url:string;
     title:string;
+    
   
     customPickerOptions;
+    mimeType: string;
+
       
   constructor(private servicioNasa:ApiNasaService) { 
    
@@ -53,6 +56,7 @@ export class ImagenesDiasAnterioresPage implements OnInit {
           this.explanation = res.explanation;
           this.url = res.url;
           this.title= res.title;
+          this.mimeType=res.media_type;
           this.Mostrar();
          
         });

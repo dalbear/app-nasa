@@ -13,6 +13,9 @@ export class ImagenDelDiaPage implements OnInit {
     url:string;
     title:string;
 
+    mimeType: string;
+
+
     constructor(private servicioNasa : ApiNasaService) {
       this.servicioNasa.mostrarImagen().subscribe(
         (res:any) => {
@@ -20,6 +23,8 @@ export class ImagenDelDiaPage implements OnInit {
           this.explanation = res.explanation;
           this.url = res.url;
           this.title= res.title;
+          this.mimeType=res.media_type;
+         
         }
       );
     }

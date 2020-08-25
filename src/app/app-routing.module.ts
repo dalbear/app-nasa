@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'imagenes-dias-anteriores',
     loadChildren: () => import('./pages/imagenes-dias-anteriores/imagenes-dias-anteriores.module').then( m => m.ImagenesDiasAnterioresPageModule)
+  },
+  {
+    path: 'semana',
+    loadChildren: () => import('./pages/semana/semana.module').then( m => m.SemanaPageModule)
   }
   
 

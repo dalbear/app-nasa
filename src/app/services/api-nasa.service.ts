@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';//mandamos a traer el HttpClient
-import{HttpClientModule} from '@angular/common/http'; //PARA CONECTARNOS CON UN CLIENTE EXTERNO
+
 
 @Injectable({
   providedIn: 'root'

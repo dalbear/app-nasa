@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ImagenDelDiaPage } from './imagen-del-dia.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -15,5 +16,6 @@ const routes: Routes = [
   //Traemos el componentModule
   imports: [RouterModule.forChild(routes),ComponentsModule],
   exports: [RouterModule],
+  
 })
 export class ImagenDelDiaPageRoutingModule {}

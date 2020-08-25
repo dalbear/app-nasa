@@ -1,4 +1,4 @@
-<app-header titulo="Dias anteriores"></app-header>
+<app-header titulo="Semana"></app-header>
 
 <ion-content class="bg-content">
  <ion-list >
@@ -8,8 +8,10 @@
             placeholder="yyyy-mm-dd"       
             display-format="YYYY MMMM DD"
             [ngModel]="fecha.toISOString()"
-            min="1996-06-20" [max]="maxDate" 
+            [min]="minDate" [max]="maxDate" 
             [pickerOptions]="customPickerOptions">
+            <!--8 DIAS : [min]="minDate" -->
+
             </ion-datetime>
      </ion-item> 
  </ion-list>
@@ -24,12 +26,14 @@
              </ion-item>          
         </ion-card-header>
         <ion-card-content >
-            <div class="video-container">
-                <img src="{{url}}" *ngIf="mimeType=='image'" class="imagen" alt="IMAGEN PUEDE NO ESTAR DISPONIBLE EN HORARIOS NOCTURNOS">
-                <iframe [src]="url | safe"  *ngIf="mimeType=='video'" frameborder="0" allowfullscreen></iframe>                    
-            </div>
-        <br>
-           <div class="ion-text-justify">
+            
+                <div class="video-container">
+                    <img src="{{url}}" *ngIf="mimeType=='image'" class="imagen" alt="IMAGEN PUEDE NO ESTAR DISPONIBLE EN HORARIOS NOCTURNOS">
+                    <iframe [src]="url | safe"  *ngIf="mimeType=='video'" frameborder="0" allowfullscreen></iframe>
+                </div>
+          <!--  <ion-img alt="IMAGEN PUEDE NO ESTAR DISPONIBLE EN ALGUNOS HORARIOS NOCTURNOS" src="`${{formato()}}`" class="imagen"></ion-img>-->
+          <div class="ion-text-justify">
+              <br>
             <ion-text color="light">{{explanation}}</ion-text>
           </div>
         </ion-card-content>
@@ -37,4 +41,3 @@
 </div>
 
 </ion-content>
-
