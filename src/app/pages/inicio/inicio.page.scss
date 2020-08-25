@@ -2,7 +2,14 @@
     --ion-background-color:#001a4d;
 }*/
 #container{
-    .page-centered-element { position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; } .content { text-align: center; .buttons-container { margin-top: 30px; font-family: 'Nunito' , sans-serif; } }
+    .page-centered-element { 
+        position: absolute;
+        left: 0;   right: 0;  top: 0; bottom: 0;
+        align-items: center;
+        display: flex;
+     justify-content: center; } 
+     
+   
 }
 
 .bg-imagen{
