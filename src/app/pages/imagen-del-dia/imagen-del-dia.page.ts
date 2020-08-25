@@ -12,7 +12,6 @@ export class ImagenDelDiaPage implements OnInit {
     explanation:string;
     url:string;
     title:string;
-
     mimeType: string;
 
 
