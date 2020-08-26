@@ -18,7 +18,7 @@
         <ion-card-content >
             <div class="video-container">
                 <img src="{{url}}" *ngIf="mimeType=='image'" class="imagen" alt="IMAGEN PUEDE NO ESTAR DISPONIBLE EN HORARIOS NOCTURNOS">
-                <iframe [src]="url | safe"  *ngIf="mimeType=='video'" frameborder="0" allowfullscreen></iframe>
+                <iframe [src]="url | safe"  *ngIf="mimeType==='video'" frameborder="0" allowfullscreen></iframe>
             </div>
         <br>
             <div class="ion-text-justify">
